@@ -1,0 +1,10 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "nasm",
+        "command": "if(!(Test-Path -Path build)) {mkdir build} ;nasm -f win64 ${fileBasename} -o ${fileWorkspaceFolder}/build/${fileBasenameNoExtension}.obj;gcc ${fileWorkspaceFolder}/build/${fileBasenameNoExtension}.obj -o ${fileWorkspaceFolder}/build/${fileBasenameNoExtension}.exe;${fileWorkspaceFolder}/build/./${fileBasenameNoExtension}.exe",
+        "type": "shell"
+      }
+    ]
+}
